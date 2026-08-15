@@ -11,16 +11,6 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-  const styleEl = document.createElement("style");
-  styleEl.textContent = css;
-  document.head.appendChild(styleEl);
-
-  // ---------------------------------------------------------
-  // MARKUP
-  // ---------------------------------------------------------
-  const root = document.createElement("div");
-  root.className = "op-root";
-  root.innerHTML = `
     <div class="op-panel" id="op-panel" role="dialog" aria-label="${CONFIG.name} chat" aria-hidden="true">
       <div class="op-header">
         <div class="op-orbit"></div>
