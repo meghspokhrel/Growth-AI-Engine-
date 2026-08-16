@@ -237,15 +237,86 @@
           <p>One reply, from the person doing the work — usually within a day. No sales team, no runaround.</p>
         </div>
         <form class="cta-form" id="leadForm" action="https://formspree.io/f/xjybekgl" method="POST">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-          <label for="message">What do you need help with?</label>
-          <textarea id="message" name="message" rows="3" required></textarea>
-          <button type="submit" class="btn btn-primary">Send message</button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-        </form>
+
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" autocomplete="name" required>
+
+  <label for="business">Business name</label>
+  <input type="text" id="business" name="business" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" autocomplete="email" required>
+
+  <label for="phone">Phone number</label>
+  <input type="tel" id="phone" name="phone" autocomplete="tel">
+
+  <label for="website">Website</label>
+  <input
+    type="url"
+    id="website"
+    name="website"
+    placeholder="https://example.com"
+  >
+
+  <label for="businessType">Business type</label>
+  <select id="businessType" name="business_type" required>
+    <option value="">Select your business type</option>
+    <option value="local-retail">Local retail</option>
+    <option value="restaurant-food">Restaurant / Food</option>
+    <option value="automotive">Automotive dealership</option>
+    <option value="service-provider">Service provider</option>
+    <option value="ecommerce">Ecommerce</option>
+    <option value="other">Other</option>
+  </select>
+
+  <label for="services">What do you need help with?</label>
+  <select id="services" name="service_needed" required>
+    <option value="">Select a service</option>
+    <option value="google-business-profile">Google Business Profile</option>
+    <option value="local-seo">Local SEO</option>
+    <option value="website-audit">Website & conversion audit</option>
+    <option value="content-seo">Content & SEO writing</option>
+    <option value="social-media">Social media management</option>
+    <option value="ecommerce-seo">Ecommerce SEO</option>
+    <option value="growth-strategy">Growth strategy</option>
+    <option value="multiple">Multiple services</option>
+  </select>
+
+  <label for="budget">Approximate monthly budget</label>
+  <select id="budget" name="budget">
+    <option value="">Select a budget</option>
+    <option value="under-10000">Under ₹10,000</option>
+    <option value="10000-25000">₹10,000 – ₹25,000</option>
+    <option value="25000-50000">₹25,000 – ₹50,000</option>
+    <option value="50000-plus">₹50,000+</option>
+    <option value="not-sure">Not sure yet</option>
+  </select>
+
+  <label for="timeline">When do you want to start?</label>
+  <select id="timeline" name="timeline">
+    <option value="">Select a timeline</option>
+    <option value="immediately">Immediately</option>
+    <option value="this-month">This month</option>
+    <option value="next-month">Next month</option>
+    <option value="exploring">Just exploring</option>
+  </select>
+
+  <label for="message">Tell me about your project</label>
+  <textarea
+    id="message"
+    name="message"
+    rows="5"
+    placeholder="What are you trying to improve or fix?"
+    required
+  ></textarea>
+
+  <button type="submit" class="btn btn-primary">
+    Send message
+  </button>
+
+  <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+</form>
       </div>
     </div>
   </section>
